@@ -112,7 +112,6 @@ def main():
             item['Direccion'] = obfuscate_data(row['Direccion'], DataType.ADDRESS)
             item['Numero_Tarjeta'] = obfuscate_data(row['Numero_Tarjeta'], DataType.PAYMENT_CARD)
             item['Segmento'] = row['Segmento']
-            item['Cliente_ID'] = hash_key
             del item['salt']  # Remove salt from the anonymized data for security
             anonymized_data.append(item)
 
